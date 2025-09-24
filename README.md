@@ -15,8 +15,6 @@ a web browser and opening the index.html file.
 
 ### Color
 
-* The text is difficult to read because of the current color scheme. Can you do a test of the current color contrast (text/background), report the results of the test, and then fix it by changing the assigned colors?
-
 Using the WebAIM constrast checker I tested the text color against the current background. It failed
 this test for all variations and had a contrast ration of 2.79:1. So not very high. Results are linked below:
 ```
@@ -33,12 +31,6 @@ And changed the colors to something that passed the contrast level required.
 
 ### Semantic HTML
 
-    The content is still not very accessible — report on what happens when you try to navigate it using a keyboard.
-    Can you update the article text to make it easier for screen reader users to navigate?
-    The navigation menu part of the site (wrapped in <div class="nav"></div>) could be made more accessible by putting it in a proper HTML semantic element. Which one should it be updated to? Make the update.
-
-Note: You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looks better.
-
 The tab order is able to move to most of the links and references, but not through any of the text. This
 results in a weird sort of jumping around that results in a bad experience on the web site. I also noticed
 that the tab selection misses the comment box, which is not very accessible as a result.    
@@ -53,14 +45,9 @@ more accessible for users.
 
 ### The Images
 
-The images are currently inaccessible to screen reader users. Can you fix this?
-
 The images provided lack any alt text. I added this to both images.
 
 ### The Audio Player
-
-    The <audio> player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
-    The <audio> player isn't accessible to those using older browsers that don't support HTML audio. How can you allow them to still access the audio?
 
 The audio uses the builtin browser audio player to work. If the browser does not support this,
 an additional paragraph tag can be added in the audio tag that can link to the audio file. I added
@@ -70,9 +57,6 @@ For hearing impaired people a transcript to the audo should be provided. Because
 short, I added the transcript directly below the audio playback.
 
 ### The Forms
-
-    The <input> element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screen readers?
-    The two <input> elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
 
 I added label elements linked to the input fields of the search form. I then updated the css to hide
 the labels. This has the effect of making it eaiser for screen reader users to fill out the form, as 
@@ -85,14 +69,10 @@ should have the effect of linking the labels to the inputs.
 
 ### The Show/Hide Comment Control
 
-The show/hide comment control button is not currently keyboard-accessible. Can you make it keyboard-accessible, both in terms of focusing it using the tab key and activating it using the return key?
-
 I was able to fix the issue of the button not focusing by replacing the div tags with button ones.
 This also had the effect of the button activating when the enter key was pressed.
 
 ### The Table
-
-The data table is not currently very accessible — it is hard for screen reader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?
 
 The data table provided was minimally constructed. I added th tags for the header elements and
 defined the header scope used in the table. I also added a caption tag explaining what the table
@@ -100,8 +80,6 @@ was showing. I also added a css element that hid the caption, as it would likely
 to users who can already see the table.
 
 ### Other Considerations?
-
-Can you list two more ideas for improvements that would make the website more accessible?
 
 One thing that bothers me about this site is how small the text is. I was kind of having
 a hard time with it if I didn't focus, so I increased the size a good amount until it
